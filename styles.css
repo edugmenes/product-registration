@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#registro {
+    width: 600px;
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 5px;
+    border: 5px solid #ccc;
+}
+
+#registro h1 {
+    text-align: center;
+}
+
+#registro input {
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+    width: 80%;
+}
+
+#registro .buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 9px;
+}
+
+button {
+    border-radius: 8%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+button.cadastrar-btn,
+button.listar-btn {
+    background-color:navy;
+    color: white;
+
+}
+
+button.deletar-btn,
+button.limpar-btn {
+    background-color:darkred;
+    color: white;
+}
+
+button.reset-btn {
+    background-color: gray;
+    color: white;
+}
+
+button.deletarGrid-btn{
+    background-color: darkorange;
+    color: black;
+    border: none;
+}
+
+.cadastrar-btn:hover,
+.listar-btn:hover,
+.reset-btn:hover {
+    background-color:blue;
+    color: white;
+}
+
+.deletar-btn:hover,
+.limpar-btn:hover,
+.deletarGrid-btn:hover {
+    background-color:red;
+    color: white;
+}
+
+#message {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.highlight {
+    color: green;
+    font-weight: bold;
+}
+
+.warning {
+    color: rgb(107, 29, 29);
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1.5px solid rgb(47, 70, 124);
+    padding: 5px;
+}
+
+th {
+    text-align: center;
+    background-color: rgba(1, 7, 26, 0.105);
+}
+
+td {
+    text-align: left;
+}

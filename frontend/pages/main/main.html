@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastramento de Produtos</title>
+</head>
+
+<style>
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -112,3 +122,27 @@ th {
 td {
     text-align: left;
 }
+</style>
+
+<body>
+    <div id="registro">
+        <h1>Cadastro de Produtos</h1>
+        <input type="number" id="codigoProduto" placeholder="Código do Produto:">
+        <input type="text" id="descricaoProduto" placeholder="Descrição do Produto:">
+        <input type="text" id="fabricanteProduto" placeholder="Fabricante do Produto:">
+        <input type="number" id="quantidadeEstoque" placeholder="Quantidade em Estoque:">
+        <div class="buttons-container">
+            <button onclick="cadastrar()" class="cadastrar-btn">Cadastrar</button>
+            <button onclick="listar()" class="listar-btn">Listar</button>
+            <button onclick="limpar()" class="limpar-btn">Limpar</button>
+            <button onclick="deletar()" class="deletar-btn">Deletar</button>
+            <button onclick="reset()" class="reset-btn">Reset</button>
+        </div>
+        <div id="message"></div>
+        <div id="lista"></div>
+    </div>
+    
+    <script src="./main.js"></script>
+</body>
+
+</html>

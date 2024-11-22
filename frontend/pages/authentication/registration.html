@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Cadastro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        #cadastro {
+            width: 400px;
+            background-color: lightgray;
+            padding: 20px;
+            border-radius: 5px;
+            border: 5px solid #ccc;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #cadastro h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #cadastro input {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 80%;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #cadastro .buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button.cadastrar-btn {
+            background-color: navy;
+            color: white;
+        }
+
+        button.cadastrar-btn:hover {
+            background-color: blue;
+        }
+
+        button.reset-btn {
+            background-color: gray;
+            color: white;
+        }
+
+        button.reset-btn:hover {
+            background-color: darkgray;
+        }
+
+        #cadastro a {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: navy;
+            text-decoration: none;
+        }
+
+        #cadastro a:hover {
+            text-decoration: underline;
+        }
+
+        #message {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .highlight {
+            color: green;
+            font-weight: bold;
+        }
+
+        .warning {
+            color: darkred;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cadastro">
+        <h1>Cadastro</h1>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="senha" placeholder="Senha">
+        <input type="password" id="confirmarSenha" placeholder="Confirmar Senha">
+        <div class="buttons-container">
+            <button onclick="cadastrar()" class="cadastrar-btn">Cadastrar</button>
+            <button onclick="limpar()" class="reset-btn">Limpar</button>
+        </div>
+        <a href="/login">Já tem uma conta? Faça login</a>
+        <div id="message"></div>
+    </div>
+
+    <script src="../../api/authentication.js"></script>
+</body>
+
+</html>

@@ -8,7 +8,16 @@ app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Rota inicial para testar o servidor
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/index.html'));
+    res.sendFile(path.join(__dirname, 'public', '../../frontend/pages/authentication/login.html'));
+});
+
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', '../../frontend/pages/authentication/login.html'));
+});
+
+// Rota para cadastro
+app.get('/registration', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', '../../frontend/pages/authentication/registration.html'));
 });
 
 // Inicia o servidor

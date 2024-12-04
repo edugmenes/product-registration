@@ -31,7 +31,7 @@ app.get('/login', (req, res) => {
 });
 
 // Rota para cadastro
-app.get('/registration', (req, res) => {
+app.get('/register', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', '../../frontend/pages/authentication/registration.html'));
 });
 
